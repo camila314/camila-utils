@@ -1,0 +1,14 @@
+{
+	"geode": "4.8.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "camila314.test",
+	"name": "test",
+	"version": "v1.0.0",
+	"developer": "camila314",
+	"description": "camila-utils test"
+}
