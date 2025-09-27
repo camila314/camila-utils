@@ -7,9 +7,10 @@ if(NOT COMMAND CPMAddPackage)
 endif()
 
 CPMAddPackage("gh:camila314/UIBuilder#main")
+CPMAddPackage("gh:camila314/UIScripter#main")
 CPMAddPackage("gh:camila314/cpp-reactive#main")
 
 add_library(camila-utils INTERFACE)
 
 target_include_directories(camila-utils INTERFACE include)
-target_link_libraries(camila-utils INTERFACE UIBuilder cpp-reactive)
+target_link_libraries(camila-utils INTERFACE UIBuilder cpp-reactive UIScripter)
