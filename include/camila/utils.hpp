@@ -24,6 +24,28 @@ namespace camila {
 		return setting;
 	}
 
+	class CCMenuColor : public CCMenu {
+	 public:
+	    inline static CCMenuColor* create() {
+	        auto ret = new CCMenuColor();
+	        if (ret->init()) {
+	            ret->setPosition({0, 0});
+	            ret->setAnchorPoint({0, 0});
+	            ret->autorelease();
+	            return ret;
+	        }
+	        delete ret;
+	        return nullptr;
+	    }
+
+	    inline void draw() override {
+	        auto c = ccc4FFromccc3B(getColor());
+	        c.a = getOpacity() / 255.0f;
+	        cocos2d::ccDrawSolidRect({0, 0}, getContentSize(), c);
+	    }
+	};
+
+
 	namespace coro {
 		using namespace geode::utils::coro;
 		inline CoTask<void> nextFrame() {
