@@ -13,4 +13,4 @@ CPMAddPackage("gh:camila314/cpp-reactive#main")
 add_library(camila-utils INTERFACE)
 
 target_include_directories(camila-utils INTERFACE include)
-target_link_libraries(camila-utils INTERFACE UIBuilder cpp-reactive UIScripter)
+target_link_libraries(camila-utils INTERFACE UIBuilder cpp-reactive UIScripter geode-sdk)
