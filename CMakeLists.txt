@@ -7,7 +7,7 @@ if(NOT COMMAND CPMAddPackage)
 endif()
 
 CPMAddPackage("gh:camila314/UIBuilder#main")
-CPMAddPackage("gh:camila314/cpp-reactive#5b5ae3e")
+CPMAddPackage("gh:camila314/cpp-reactive#5db592f")
 
 add_library(camila-utils INTERFACE)
 
