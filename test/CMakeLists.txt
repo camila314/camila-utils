@@ -23,7 +23,7 @@ add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 add_subdirectory(.. ${CMAKE_CURRENT_BINARY_DIR}/camila-utils)
 
 
-target_compile_options(${PROJECT_NAME} PRIVATE -g)
+target_compile_options(${PROJECT_NAME} PRIVATE -O3)
 
 setup_geode_mod(${PROJECT_NAME})
 target_link_libraries(${PROJECT_NAME} camila-utils)
