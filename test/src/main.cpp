@@ -1,7 +1,7 @@
 #include <Geode/Geode.hpp>
 
 #include <camila/Slider.hpp>
-#include <camila/UserObject.hpp>
+#include <camila/ObjectData.hpp>
 #include <Geode/utils/coro.hpp>
 
 using namespace geode::prelude;
@@ -13,7 +13,7 @@ class $modify(MenuLayer) {
     bool init() {
         if (!MenuLayer::init()) return false;
 
-        static Signal<double> mydouble = 35.0;
+        auto mydouble = camila::tetherData(this, Signal<double>());
 
         Build<camila::Slider>::create(mydouble.ref())
             .parent(this)
