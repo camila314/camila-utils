@@ -1,3 +1,5 @@
+#pragma once
+
 #include <Geode/utils/cocos.hpp>
 #include <Geode/UI.hpp>
 #include <UIBuilder.hpp>
