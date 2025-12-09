@@ -90,6 +90,10 @@ namespace camila {
 			return Build(this);
 		}
 
+		RefSignal<double> getSignal() const {
+			return m_signal;
+		}
+
 		void setContentSize(const CCSize& size) override {
 			CCNode::setContentSize(size);
 			m_dirty = true;
