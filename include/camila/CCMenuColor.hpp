@@ -21,6 +21,8 @@ namespace camila {
 	        auto c = cocos2d::ccc4FFromccc3B(getColor());
 	        c.a = getOpacity() / 255.0f;
 	        cocos2d::ccDrawSolidRect({0, 0}, getContentSize(), c);
+
+	        cocos2d::CCMenu::draw();
 	    }
 	};
 }

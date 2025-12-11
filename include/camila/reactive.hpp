@@ -25,7 +25,7 @@ namespace camila {
 		if (auto wrapper = typeinfo_cast<ObjWrapper<Observatory>*>(obj->getUserObject("cppreactive-observer"))) {
 			ob = &wrapper->getValue();
 		} else {
-			auto wrap = ObjWrapper<Observatory>::create({});
+			auto wrap = ObjWrapper<Observatory>::create(std::move(Observatory{}));
 			ob = &wrap->getValue();
 			obj->setUserObject("cppreactive-observer", wrap);
 		}

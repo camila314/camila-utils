@@ -65,6 +65,11 @@ namespace camila {
 	        runAction(CCFadeTo::create(0.14, 150));
 	    }
 
+	    TaskType showAndWait() {
+	    	show();
+	    	return task();
+	    }
+
 	    TaskType task() {
 	        return m_task;
 	    }
