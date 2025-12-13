@@ -48,6 +48,13 @@ namespace camila {
 	    static Selector* create(RefSignal<int> sig, std::vector<std::string> choices) {
 	        return new Selector(std::move(sig), std::move(choices));
 	    }
+	    static Selector* create(RefSignal<int> sig, std::initializer_list<char const*> choices) {
+	    	std::vector<std::string> vec;
+	    	for (auto c : choices) {
+	    		vec.emplace_back(c);
+	    	}
+	        return new Selector(std::move(sig), std::move(vec));
+	    }
 
 	    auto font(std::string font) {
 	        m_font = std::move(font);
